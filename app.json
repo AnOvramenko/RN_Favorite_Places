@@ -4,6 +4,7 @@
     "slug": "FavoritePlaces",
     "version": "1.0.0",
     "orientation": "portrait",
+    "backgroundColor": "#221c30",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -24,6 +25,21 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "The app needs access to your camera in order to take photos of your favorite places."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow this app to use your location."
+        }
+      ],
+      "expo-sqlite"
+    ]
   }
 }
